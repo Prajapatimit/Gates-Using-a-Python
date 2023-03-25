@@ -1,14 +1,13 @@
-#NAND Gate
-def NAND (a, b):
-    if a == 1 and b == 1:
-        return False
-    else:
-        return True
- 
-if __name__=='__main__':
-    print(NAND(1, 0))
-    print(" A = 0, B = 0| A NAND B =",NAND(0,0)," | ")
-    print(" A =0, B = 1 | A NAND B =",NAND(0,1)," | ")
-    print(" A = 1, B =0 | A NAND B =",NAND(1,0)," | ")
-    print(" A = 1, B =1 | A NAND B =",NAND(1,1)," | ")
 
+def AND(A, B):
+	return A & B;	
+def NOT(A):
+	return ~A+2	
+def NAND(A, B):
+	return NOT(AND(A, B))
+
+
+print("Output of 0 NAND 0 is", NAND(0, 0))
+print("Output of 0 NAND 1 is", NAND(0, 1))
+print("Output of 1 NAND 0 is", NAND(1, 0))
+print("Output of 1 NAND 1 is", NAND(1, 1))
