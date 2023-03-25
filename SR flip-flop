@@ -1,25 +1,33 @@
-s = 0  # set input
-r = 0  # reset input
-q = 0  # output
-q_bar = 1  # complement output
+# Prompt the user for S and R inputs
+S = int(input("Enter the value of S (0 or 1): "))
+R = int(input("Enter the value of R (0 or 1): "))
 
-while True:
-    # Flip-flop logic
-    if s == 1 and r == 0:
-        q = 1
-        q_bar = 0
-    elif s == 0 and r == 1:
-        q = 0
-        q_bar = 1
-    elif s == 0 and r == 0:
-        q = q
-        q_bar = q_bar
-    else:
-        print("Invalid input")  # catch-all error message
-    
-    # Update inputs
-    s = int(input("Enter set input (0 or 1): "))
-    r = int(input("Enter reset input (0 or 1): "))
-    
-    # Display output
-    print("Output: ", q, q_bar)
+# Initialize the flip-flop outputs to 0
+Q = 0
+Q_bar = 1
+
+# Implement the S-R flip-flop using if-else statements
+if S == 1 and R == 0:
+    Q = 1
+    Q_bar = 0
+    print("Q: ", Q)
+    print("Q_bar: ", Q_bar)
+    print("State: Set condition")
+elif S == 0 and R == 1:
+    Q = 0
+    Q_bar = 1
+    print("Q: ", Q)
+    print("Q_bar: ", Q_bar)
+    print("State: Reset condition")
+elif S == 1 and R == 1:
+    Q = 0
+    Q_bar = 0
+    print("Q: ", Q)
+    print("Q_bar: ", Q_bar)
+    print("State: Invalid inputs")
+else:
+    Q= Q
+    Q_bar = Q_bar
+    print("Q: ", Q)
+    print("Q_bar: ", Q_bar)
+    print("State: Hold condition")
