@@ -1,18 +1,8 @@
-# AND gate
+# Function to simulate AND Gate
+def AND(A, B):
+	return A & B	
 
-def AND (a, b):
-
-	if a == 1 and b == 1:
-		return True
-	else:
-		return False
-    
-if __name__=='__main__':
-	print(AND(1, 1))
-	print("+---------------+----------------+")
-	print(" | AND Truth Table | Result |")
-	print(" A = False, B = False | A AND B =",AND(False,False)," | ")
-	print(" A = False, B = True | A AND B =",AND(False,True)," | ")
-	print(" A = True, B = False | A AND B =",AND(True,False)," | ")
-	print(" A = True, B = True | A AND B =",AND(True,True)," | ")
-
+print("Output of 0 AND 0 is", AND(0, 0))
+print("Output of 0 AND 1 is", AND(0, 1))
+print("Output of 1 AND 0 is", AND(1, 0))
+print("Output of 1 AND 1 is", AND(1, 1))
